@@ -49,8 +49,20 @@ public class smallHeap {
 		
 		while(s < size)
 		{
-			int rightchild = 2 * s + 2;
-			int leftchild = 2 * s + 1;
+			int right = 2 * s + 2;
+			int left = 2 * s + 1;
+			if(right < size && queue[left] >queue[right]) //从left和right中选择更小的
+			{
+				left = right;
+			}
+			if(q < queue[left])//若子节点的大小都比父节点小，则这个节点就是最小的了，直接break
+			{
+				break;
+			}
+			queue[s] = queue[left];//将较小的子节点移到插入的位置
+			s = left;//将这个节点移到较小的子节点的位置
 		}
+		queue[s] = q;//找到最终的位置，将q放置在那个位置
+		
 	}
 }
