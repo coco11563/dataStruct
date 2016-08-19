@@ -22,8 +22,6 @@ public class Solution {
     }
     public static TreeNode f(TreeNode root)
     {
-      
-         
         TreeNode r = root;
         do
         {
