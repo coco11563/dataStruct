@@ -30,7 +30,7 @@ public class BlockingQueueTest {
 				}
 			}).start();
 		}
-		for(int i = 0; ;i++ ){
+		for(;; ){
 			BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 			String sentence = inFromUser.readLine();
 			String[] list = sentence.split("");
